@@ -29,7 +29,7 @@ const Login = () => {
         toast('Login Successful. Redirecting...')
         setTimeout(() => {
           navigate(location.state ? location.state : '/')
-        }, 2000);
+        }, 3000);
       })
       .catch(error => {
         console.log(error.message)

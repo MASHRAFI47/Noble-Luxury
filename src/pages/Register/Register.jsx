@@ -35,7 +35,10 @@ const Register = () => {
             .then(() => {
                 updateUserProfile(fullName, photoURL)
                     .then(() => {
-                        navigate('/')
+                        toast('Register Successful. Redirecting...')
+                        setTimeout(() => {
+                            navigate('/')
+                        }, 3000);
                     })
                     .catch(error => {
                         console.log(error.message)
