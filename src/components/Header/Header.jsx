@@ -12,8 +12,8 @@ const Header = () => {
     }
     const links = <>
         <li><NavLink to={'/'} className={'font-semibold'}>Home</NavLink></li>
-        <li><NavLink to={'/blogs'} className={'font-semibold'}>Blogs</NavLink></li>
         <li><NavLink to={'/update_profile'} className={'font-semibold'}>Update Profile</NavLink></li>
+        <li><NavLink to={'/blogs'} className={'font-semibold'}>Blogs</NavLink></li>
         {/* <li><NavLink to={'/register'} className={'font-semibold'}>Register</NavLink></li> */}
         {
             !user && <li><NavLink to={'/login'} className={'font-semibold'}>Login</NavLink></li>
