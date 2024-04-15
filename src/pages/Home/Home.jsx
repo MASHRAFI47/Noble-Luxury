@@ -1,8 +1,11 @@
 import { useLoaderData } from "react-router-dom"
 import AllEstates from "../../components/AllEstates/AllEstates";
 import Banner from "../../components/Banner/Banner";
+import { useState } from "react";
 
 const Home = () => {
+  const [dataLength, setDataLength] = useState(6)
+  console.log(dataLength)
   const allTheEstates = useLoaderData();
   return (
     <div>
@@ -14,9 +17,15 @@ const Home = () => {
         </div>
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {
-            allTheEstates.map(est => <AllEstates key={est.id} est={est}></AllEstates>)
+            allTheEstates.slice(0, dataLength).map(est => <AllEstates key={est.id} est={est}></AllEstates>)
           }
         </div>
+        {
+          dataLength == allTheEstates.length ? "" : <div className="text-center mt-5">
+          <button className="btn" onClick={() => setDataLength(allTheEstates.length)}>Show All</button>
+        </div>
+        }
+        
       </section>
     </div>
   )
