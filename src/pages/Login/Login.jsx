@@ -22,21 +22,24 @@ const Login = () => {
     formState: { errors },
   } = useForm()
   const onSubmit = (data) => {
-    const {email, password} = data;
+    const { email, password } = data;
     signInUser(email, password)
-    .then(result => {
-      console.log(result.user)
-      navigate(location.state? location.state : '/')
-    })
-    .catch(error => {
-      console.log(error.message)
-      toast.warn("Invalid Info")
-    })
+      .then(result => {
+        console.log(result.user)
+        toast('Login Successful. Redirecting...')
+        setTimeout(() => {
+          navigate(location.state ? location.state : '/')
+        }, 2000);
+      })
+      .catch(error => {
+        console.log(error.message)
+        toast.warn("Invalid Info")
+      })
   }
   return (
     <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border mt-5">
       <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-      <ToastContainer />
+        <ToastContainer />
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
