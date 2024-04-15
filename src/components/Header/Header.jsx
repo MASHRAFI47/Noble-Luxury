@@ -15,9 +15,9 @@ const Header = () => {
         <li><NavLink to={'/update_profile'} className={'font-semibold'}>Update Profile</NavLink></li>
         <li><NavLink to={'/blogs'} className={'font-semibold'}>Blogs</NavLink></li>
         {/* <li><NavLink to={'/register'} className={'font-semibold'}>Register</NavLink></li> */}
-        {
+        {/* {
             !user && <li><NavLink to={'/login'} className={'font-semibold'}>Login</NavLink></li>
-        }
+        } */}
     </>
     return (
         <div className="navbar bg-base-100 container mx-auto">
@@ -38,7 +38,9 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className="dropdown dropdown-end tooltip tooltip-bottom z-[1000]" data-tip={user ? user.displayName : "User not found"}>
+                {
+                    user ?
+                    <div className="dropdown dropdown-end tooltip tooltip-bottom z-[1000]" data-tip={user ? user.displayName : "User not found"}>
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                             <img alt="Tailwind CSS Navbar component" src={user ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
@@ -55,6 +57,10 @@ const Header = () => {
                         {user && <li onClick={handleSignOut}><a>Logout</a></li>}
                     </ul>
                 </div>
+                :
+                <Link className="font-semibold" to={'/login'}>Login</Link>
+                }
+                
             </div>
         </div>
     )
