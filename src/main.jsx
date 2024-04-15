@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/update_profile",
-        element: <UpdateProfile />,
+        element: <PrivateRoute><UpdateProfile /></PrivateRoute>,
       },
       {
         path: "/estate/:id",

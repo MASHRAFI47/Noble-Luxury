@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form"
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -17,15 +19,27 @@ const Register = () => {
     } = useForm();
     const onSubmit = (data) => {
         const { email, password, fullName, photoURL } = data;
+        if (password.length < 6) {
+            toast("Password length must be at least 6 characters")
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            toast("Password must contain at least one uppercase")
+            return;
+        }
+        else if (!/[a-z]/.test(password)) {
+            toast("Password must contain at least one lowercase")
+            return;
+        }
         createUser(email, password)
             .then(() => {
                 updateUserProfile(fullName, photoURL)
-                .then(() => {
-                    navigate('/')
-                }) 
-                .catch(error => {
-                    console.log(error.message)
-                })
+                    .then(() => {
+                        navigate('/')
+                    })
+                    .catch(error => {
+                        console.log(error.message)
+                    })
             })
             .catch(error => {
                 console.log(error.message)
@@ -34,6 +48,7 @@ const Register = () => {
 
     return (
         <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border">
+            <ToastContainer />
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control">
                     <label className="label">
