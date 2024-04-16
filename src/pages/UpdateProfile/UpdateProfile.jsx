@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 // import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
     const { user, updateUserProfile } = useContext(AuthContext)
@@ -16,7 +17,7 @@ const UpdateProfile = () => {
         const {fullName, photoURL} = data
         updateUserProfile(fullName, photoURL)
         .then(() => {
-            location.reload()
+            toast("Profile Updated")
         })
         .catch(error => {
             console.log(error.message)

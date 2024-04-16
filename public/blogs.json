@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "The Ultimate Guide to Buying Your First Home",
+        "long_description": "Buying your first home is an exciting milestone, but it can also be overwhelming. This comprehensive guide walks you through the entire process, from saving for a down payment to closing the deal. Learn about different mortgage options, how to choose the right neighborhood, and tips for negotiating with sellers. Whether you're a first-time buyer or looking to upgrade, this guide has everything you need to know to make informed decisions.",
+        "short_description": "A comprehensive guide for first-time homebuyers.",
+        "image_url": "https://example.com/images/homebuying-guide.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Top 10 Tips for Selling Your Home Quickly",
+        "long_description": "Selling your home can be a stressful and time-consuming process. However, there are several strategies you can use to attract buyers and sell your home quickly. From staging your home to pricing it right, this blog post offers ten practical tips to help you get the best possible price for your property in the shortest amount of time. Whether you're selling a starter home or a luxury estate, these tips are applicable to any seller looking to streamline the selling process.",
+        "short_description": "Ten actionable tips to sell your home fast.",
+        "image_url": "https://example.com/images/selling-home-tips.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Investing in Rental Properties: What You Need to Know",
+        "long_description": "Investing in rental properties can be a lucrative opportunity, but it's not without its challenges. From finding the right property to managing tenants, this blog post covers everything you need to know to succeed as a rental property investor. Learn about market analysis, financing options, and property management strategies to maximize your ROI. Whether you're a seasoned investor or just starting out, this guide will help you navigate the complex world of real estate investing.",
+        "short_description": "Essential tips for successful rental property investment.",
+        "image_url": "https://example.com/images/rental-property-investment.jpg"
+    }
+]

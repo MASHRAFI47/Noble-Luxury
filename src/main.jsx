@@ -38,7 +38,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/blogs",
-        element: <PrivateRoute><Blogs /></PrivateRoute>
+        element: <PrivateRoute><Blogs /></PrivateRoute>,
+        loader: () => fetch('/blogs.json')
       },
       {
         path: "/login",

@@ -40,7 +40,7 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user ?
-                    <div className="dropdown dropdown-end tooltip tooltip-bottom z-[1000]" data-tip={user ? user.displayName : "User not found"}>
+                    <div className="dropdown dropdown-end tooltip tooltip-left lg:tooltip-left z-[1000]" data-tip={user ? user.displayName : "User not found"}>
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                             <img alt="Tailwind CSS Navbar component" src={user ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
