@@ -36,7 +36,7 @@ const Register = () => {
             .then(() => {
                 updateUserProfile(fullName, photoURL)
                     .then(() => {
-                        toast.success("Login Successful. Redirecting...", {
+                        toast.success("Registration Successful. Redirecting...", {
                             autoClose: 2000
                         })
                         setTimeout(() => {
@@ -53,7 +53,7 @@ const Register = () => {
     }
 
     return (
-        <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border">
+        <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border mb-20 mt-10">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Register</title>

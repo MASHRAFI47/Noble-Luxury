@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const AllEstates = ({est}) => {
     const {id, estate_title, description, price, image, status, view_property} = est
     return (
-        <div>
+        <div className="hover:scale-105 transition-all">
             <div className="card bg-base-100 shadow-xl">
             <figure><img src={image} alt={estate_title} className='md:h-[20rem] relative' /></figure>
             <p className={`absolute right-5 top-2 py-1 px-2 rounded-lg text-white ${status == 'sale' ? 'bg-green-600' : 'bg-red-600'}`}>{status}</p>

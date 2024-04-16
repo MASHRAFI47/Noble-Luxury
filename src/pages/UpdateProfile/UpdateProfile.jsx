@@ -25,7 +25,7 @@ const UpdateProfile = () => {
             })
     }
     return (
-        <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border">
+        <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border mb-20 mt-10">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Update Profile</title>

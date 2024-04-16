@@ -1,7 +1,13 @@
+import { Helmet } from "react-helmet"
 
 const Contact = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Contact Us</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Contact Us!</h1>

@@ -4,7 +4,7 @@ import Agent3 from '../../../src/assets/images/Agent3.jpg'
 
 const OurAgents = () => {
     return (
-        <section className='container mx-auto'>
+        <section className='container mx-auto mb-20'>
             <h1 className="font-bold text-4xl mb-2">Meet Our Agents</h1>
             <p className="mb-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, perferendis nemo? Molestiae quisquam saepe, soluta minima voluptatem fuga dolorem neque officia at eum</p>
 

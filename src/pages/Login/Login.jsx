@@ -42,7 +42,7 @@ const Login = () => {
   }
   return (
     <HelmetProvider>
-      <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border mt-5">
+      <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border mt-5 mb-20">
         <Helmet>
           <meta charSet="utf-8" />
           <title>Login</title>
