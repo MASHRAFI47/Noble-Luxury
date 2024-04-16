@@ -33,14 +33,14 @@ const UpdateProfile = () => {
             </Helmet>
             <ToastContainer />
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-                <h1 className="text-3xl text-center font-bold">Update Profile</h1>
-                <div className="form-control">
+                <h1 className="text-3xl text-center font-bold" data-aos="fade-down">Update Profile</h1>
+                <div className="form-control" data-aos="fade-right" data-aos-delay="100">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
                     <input type="email" placeholder="email" defaultValue={user ? user.email : ""} className="input input-bordered" {...register("email")} disabled />
                 </div>
-                <div className="form-control">
+                <div className="form-control" data-aos="fade-right" data-aos-delay="200">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
@@ -51,14 +51,14 @@ const UpdateProfile = () => {
                         } */}
                     </span>
                 </div>
-                <div className="form-control">
+                <div className="form-control" data-aos="fade-right" data-aos-delay="300">
                     <label className="label">
                         <span className="label-text">Full Name</span>
                     </label>
                     <input type="text" placeholder="full name" defaultValue={user ? user.displayName : ""} className="input input-bordered" {...register("fullName", { required: true })} />
                     {errors.fullName && <span>Update Required</span>}
                 </div>
-                <div className="form-control">
+                <div className="form-control" data-aos="fade-right" data-aos-delay="400">
                     <label className="label">
                         <span className="label-text">Photo Url</span>
                     </label>

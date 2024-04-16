@@ -18,6 +18,7 @@ import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 import BlogDetails from './components/BlogDetails/BlogDetails';
 import { HelmetProvider } from 'react-helmet-async';
 import Contact from './pages/Contact/Contact';
+import UserProfile from './pages/UserProfile/UserProfile';
 // import { ToastContainer } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
         loader: () => fetch('/blogs.json')
       },
       {
+        path: "/user-profile",
+        element: <PrivateRoute><UserProfile /></PrivateRoute>,
+      },
+      {
         path: "/login",
         element: <Login />,
       },
@@ -61,7 +66,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact-us",
-        element: <Contact />
+        element: <Contact />,
       }
     ]
   },

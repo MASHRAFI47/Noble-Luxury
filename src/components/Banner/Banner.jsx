@@ -27,11 +27,11 @@ const Banner = () => {
             // onSwiper={(swiper) => console.log(swiper)}
         >
             <SwiperSlide>
-                <img src={Banner1} className='h-[30rem] md:h-[40rem] w-full relative bg-cover' alt="" />
+                <img src={Banner1} className='h-[30rem] md:h-[40rem] w-full relative bg-cover' alt="" data-aos="fade-up" />
                 <div className='banner flex justify-center items-center absolute top-[30%] md:top-[38%] left-[10%] md:left-[10%]'>
-                    <div className='space-y-4'>
-                        <h1 className='text-xl md:text-5xl font-bold text-[#E5C597]'>Premium Luxury Flats</h1>
-                        <p className='pr-10 md:pr-20 text-sm md:text-2xl text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus ex labore earum! Doloremque quisquam doloribus quidem, illo, perferendis ut laudantium nostrum hic nesciunt dolorum soluta a eos incidunt saepe! Officiis.</p>
+                    <div className='space-y-4' data-aos="fade-down">
+                        <h1 className='text-xl md:text-5xl font-bold text-[#E5C597]' data-aos="fade-down">Premium Luxury Flats</h1>
+                        <p className='pr-10 md:pr-20 text-sm md:text-2xl text-white' data-aos="fade-left" data-aos-delay="300">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus ex labore earum! Doloremque quisquam doloribus quidem, illo, perferendis ut laudantium nostrum hic nesciunt dolorum soluta a eos incidunt saepe! Officiis.</p>
                     </div>
                 </div>
             </SwiperSlide>

@@ -22,6 +22,9 @@ const Header = () => {
     }
     const links = <>
         <li><NavLink to={'/'} className={'font-semibold'}>Home</NavLink></li>
+        {
+            user && <li><NavLink to={'/user-profile'} className={'font-semibold'}>User Profile</NavLink></li>
+        }
         <li><NavLink to={'/update_profile'} className={'font-semibold'}>Update Profile</NavLink></li>
         <li><NavLink to={'/blogs'} className={'font-semibold'}>Blogs</NavLink></li>
         <li><NavLink to={'/contact-us'} className={'font-semibold'}>Contact</NavLink></li>
@@ -31,7 +34,7 @@ const Header = () => {
         } */}
     </>
     return (
-        <div className="navbar bg-base-100 container mx-auto">
+        <div className="navbar bg-base-100 container mx-auto" data-aos="fade-in">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,7 +44,7 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <Link to={'/'} className="font-bold text-3xl"><h1>Noble<span className="text-[#d7a764]">Luxury</span></h1></Link>
+                <Link to={'/'} className="font-bold text-2xl md:text-3xl"><h1>Noble<span className="text-[#d7a764]">Luxury</span></h1></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

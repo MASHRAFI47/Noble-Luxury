@@ -10,7 +10,7 @@ const Blogs = () => {
           <title>Blogs</title>
           <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
-        <div className="grid grid-cols-1 md:grid-cols-3 container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 container mx-auto" data-aos="fade-in">
           {
             allBlogs.map((blog) => <div key={blog.id}>
               <div className="card w-96 bg-base-100 shadow-xl">

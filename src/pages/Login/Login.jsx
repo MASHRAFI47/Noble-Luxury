@@ -50,15 +50,15 @@ const Login = () => {
         </Helmet>
         <ToastContainer />
         <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-          <h1 className="text-3xl text-center font-bold">Login</h1>
-          <div className="form-control">
+          <h1 className="text-3xl text-center font-bold" data-aos="fade-down">Login</h1>
+          <div className="form-control" data-aos="fade-right" data-aos-delay="100">
             <label className="label">
               <span className="label-text">Email</span>
             </label>
             <input type="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
             {errors.email && <span>This field is required</span>}
           </div>
-          <div className="form-control">
+          <div className="form-control" data-aos="fade-right" data-aos-delay="200">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
@@ -73,7 +73,7 @@ const Login = () => {
               <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
             </label>
           </div>
-          <div className="form-control mt-6">
+          <div className="form-control mt-6" data-aos="fade-right" data-aos-delay="300">
             <button className="btn transition ease-in-out bg-[#E5C597] hover:bg-[#E5C597] border-none text-white">Login</button>
           </div>
 
