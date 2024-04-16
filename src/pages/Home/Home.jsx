@@ -26,11 +26,11 @@ const Home = () => {
         <OurServices />
 
         <section>
-          <div className='container mx-auto text-center'data-aos="fade-up">
+          <div className='container mx-auto text-center px-5 md:px-0'data-aos="fade-up">
             <h1 className='text-4xl font-bold' data-aos="fade-down">Discover Our Best Deals</h1>
-            <p className='mt-3 mb-10 mx-auto' data-aos="slide-right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, modi pariatur. Inventore facilis exercitationem libero earum illo. Ipsam, odit fugit</p>
+            <p className='mt-3 mb-10 mx-auto' data-aos="slide-right">Explore exclusive offers and unbeatable discounts on prime real estate properties. From luxury apartments to investment opportunities.</p>
           </div>
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5 lg:px-0">
             {
               allTheEstates.slice(0, dataLength).map(est => <AllEstates key={est.id} est={est}></AllEstates>)
             }

@@ -31,7 +31,7 @@ const Banner = () => {
                 <div className='banner flex justify-center items-center absolute top-[30%] md:top-[38%] left-[10%] md:left-[10%]'>
                     <div className='space-y-4' data-aos="fade-down">
                         <h1 className='text-xl md:text-5xl font-bold text-[#E5C597]' data-aos="fade-down">Premium Luxury Flats</h1>
-                        <p className='pr-10 md:pr-20 text-sm md:text-2xl text-white' data-aos="fade-left" data-aos-delay="300">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus ex labore earum! Doloremque quisquam doloribus quidem, illo, perferendis ut laudantium nostrum hic nesciunt dolorum soluta a eos incidunt saepe! Officiis.</p>
+                        <p className='pr-10 md:pr-20 text-sm md:text-2xl text-white' data-aos="fade-left" data-aos-delay="300">Discover unparalleled elegance and sophistication with our collection of premium luxury flats. Designed with meticulous attention to detail, these residences offer a lifestyle of unparalleled comfort and exclusivity.</p>
                     </div>
                 </div>
             </SwiperSlide>
@@ -40,7 +40,7 @@ const Banner = () => {
                 <div className='banner flex justify-center items-center absolute top-[30%] md:top-[38%] left-[10%] md:left-[10%]'>
                     <div className='space-y-4'>
                         <h1 className='text-xl md:text-5xl font-bold text-[#E5C597]'>Exotic Penthouses</h1>
-                        <p className='pr-10 md:pr-20 text-sm md:text-2xl text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus ex labore earum! Doloremque quisquam doloribus quidem, illo, perferendis ut laudantium nostrum hic nesciunt dolorum soluta a eos incidunt saepe! Officiis.</p>
+                        <p className='pr-10 md:pr-20 text-sm md:text-2xl text-white'>Indulge in the epitome of luxury living with our exquisite collection of exotic penthouses. Perched high above the city skyline or nestled amidst breathtaking natural landscapes, these penthouses offer a lifestyle of unparalleled opulence and exclusivity.</p>
                     </div>
                 </div>
             </SwiperSlide>
@@ -49,7 +49,7 @@ const Banner = () => {
                 <div className='banner flex justify-center items-center absolute top-[30%] md:top-[38%] left-[10%] md:left-[10%]'>
                     <div className='space-y-4'>
                         <h1 className='text-xl md:text-5xl font-bold text-[#E5C597]'>Exclusive Private Islands</h1>
-                        <p className='pr-10 md:pr-20 text-sm md:text-2xl text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus ex labore earum! Doloremque quisquam doloribus quidem, illo, perferendis ut laudantium nostrum hic nesciunt dolorum soluta a eos incidunt saepe! Officiis.</p>
+                        <p className='pr-10 md:pr-20 text-sm md:text-2xl text-white'>Escape to your own secluded paradise with our exclusive private island retreat. Nestled amidst pristine turquoise waters and surrounded by lush tropical landscapes, this private island offers a unique and unparalleled luxury living experience.</p>
                     </div>
                 </div>
             </SwiperSlide>

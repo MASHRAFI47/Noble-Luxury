@@ -10,10 +10,10 @@ const Blogs = () => {
           <title>Blogs</title>
           <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
-        <div className="grid grid-cols-1 md:grid-cols-3 container mx-auto" data-aos="fade-in">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 container mx-auto px-5 lg:px-0 mb-10" data-aos="fade-in">
           {
             allBlogs.map((blog) => <div key={blog.id}>
-              <div className="card w-96 bg-base-100 shadow-xl">
+              <div className="card bg-base-100 shadow-xl">
                 <figure><img src={blog.image_url} alt="Shoes" /></figure>
                 <div className="card-body">
                   <h2 className="card-title">{blog.title}</h2>

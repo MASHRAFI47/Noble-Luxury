@@ -1,10 +1,13 @@
 import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom"
 import { IoLocationOutline } from "react-icons/io5";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 
 
 
 const EstateDetails = () => {
+  const {theme} = useContext(AuthContext)
   const allTheEstates = useLoaderData();
   const { id } = useParams();
   const singleEstate = allTheEstates.find(est => est.id == id);
@@ -37,7 +40,7 @@ const EstateDetails = () => {
             <div>
               <p><span className="font-semibold text-xl">Facilities:</span></p>
               {
-                facilities.map((fac, index) => <div className="bg-green-300 inline-block rounded-md p-2 mr-2 ml-1 mt-2" key={index}><p>{fac}</p></div>)
+                facilities.map((fac, index) => <div className={`bg-green-300 inline-block rounded-md p-2 mr-2 ml-1 mt-2 ${theme == "light" ? "text-black" : "text-black"}`} key={index}><p>{fac}</p></div>)
               }
             </div>
           </div>
