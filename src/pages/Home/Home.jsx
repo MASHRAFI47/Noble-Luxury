@@ -3,6 +3,7 @@ import AllEstates from "../../components/AllEstates/AllEstates";
 import Banner from "../../components/Banner/Banner";
 import { useState } from "react";
 
+
 const Home = () => {
   const [dataLength, setDataLength] = useState(6)
   console.log(dataLength)
@@ -22,7 +23,7 @@ const Home = () => {
         </div>
         {
           dataLength == allTheEstates.length ? "" : <div className="text-center mt-5">
-          <button className="btn" onClick={() => setDataLength(allTheEstates.length)}>Show All</button>
+          <button className="btn transition ease-in-out bg-[#E5C597] hover:bg-blue-600 text-white" onClick={() => setDataLength(allTheEstates.length)}>Show All</button>
         </div>
         }
         

@@ -13,7 +13,7 @@ const AllEstates = ({est}) => {
                     <p>{description}</p>
                     <p className='text-blue-600 text-xl'>{price}</p>
                     <div className="card-actions justify-end">
-                        <Link className='btn transition ease-in-out bg-[#E5C597] hover:bg-sky-400 text-white' to={`/estate/${id}`}>{view_property}</Link>
+                        <Link className='btn transition ease-in-out bg-[#E5C597] hover:bg-blue-600 text-white' to={`/estate/${id}`}>{view_property}</Link>
                     </div>
                 </div>
             </div>

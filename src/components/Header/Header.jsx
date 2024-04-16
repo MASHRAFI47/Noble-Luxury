@@ -58,7 +58,7 @@ const Header = () => {
                     </ul>
                 </div>
                 :
-                <Link className="font-semibold" to={'/login'}>Login</Link>
+                <Link className="font-semibold btn" to={'/login'}>Login</Link>
                 }
                 
             </div>

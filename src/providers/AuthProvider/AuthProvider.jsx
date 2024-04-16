@@ -21,9 +21,16 @@ const AuthProvider = ({ children }) => {
     }
 
     const updateUserProfile = (fullName, image) => {
+        setLoading(true)
         return updateProfile(auth.currentUser, {
             displayName: fullName,
             photoURL: image
+        })
+        .then(() => {
+            setUser({
+                displayName: fullName,
+                photoURL: image
+            })
         })
     }
 
