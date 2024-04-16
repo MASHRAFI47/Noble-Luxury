@@ -15,6 +15,16 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true)
 
+    // handleThemeChange
+    const [theme, setTheme] = useState("light")
+    const handleThemeChange = (e) => {
+        if(e.target.checked) {
+            setTheme("halloween")
+        } else {
+            setTheme("light")
+        }
+    }
+
     const createUser = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
@@ -61,7 +71,7 @@ const AuthProvider = ({ children }) => {
         }
     }, []);
 
-    const authInfo = { user, loading, createUser, updateUserProfile, signInUser, googleSignIn, facebookSignIn, logOut }
+    const authInfo = { user, loading, createUser, updateUserProfile, signInUser, googleSignIn, facebookSignIn, logOut, theme, handleThemeChange }
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

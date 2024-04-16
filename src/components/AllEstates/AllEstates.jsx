@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom"
 import PropTypes from 'prop-types';
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 
 const AllEstates = ({est}) => {
+    const {theme} = useContext(AuthContext)
     const {id, estate_title, description, price, image, status, view_property} = est
     return (
         <div className="hover:scale-105 transition-all" data-aos="fade-down">
@@ -11,9 +14,9 @@ const AllEstates = ({est}) => {
                 <div className="card-body">
                     <h2 className="card-title">{estate_title}</h2>
                     <p>{description}</p>
-                    <p className='text-blue-600 text-xl'>{price}</p>
+                    <p className={` text-xl ${theme == "light" ? "text-blue-600" : "text-red-600" }`}>{price}</p>
                     <div className="card-actions justify-end">
-                        <Link className='btn transition ease-in-out bg-[#E5C597] hover:bg-blue-600 text-white' to={`/estate/${id}`}>{view_property}</Link>
+                        <Link className={`btn transition ease-in-out bg-[#E5C597] hover:bg-blue-600  ${theme == "light" ? "text-white" : "text-black" }`} to={`/estate/${id}`}>{view_property}</Link>
                     </div>
                 </div>
             </div>

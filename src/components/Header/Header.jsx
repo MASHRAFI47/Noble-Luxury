@@ -1,20 +1,11 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { Link, NavLink } from "react-router-dom"
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider"
 
 
 const Header = () => {
-    const [theme, setTheme] = useState("light")
-    const handleThemeChange = (e) => {
-        if(e.target.checked) {
-            setTheme("halloween")
-        } else {
-            setTheme("light")
-        }
-    }
 
-
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut, theme, handleThemeChange } = useContext(AuthContext)
     const handleSignOut = () => {
         logOut()
             .then()
@@ -78,7 +69,6 @@ const Header = () => {
                         :
                         <Link className="font-semibold btn rounded-lg" to={'/login'}>Login</Link>
                 }
-
             </div>
         </div>
     )

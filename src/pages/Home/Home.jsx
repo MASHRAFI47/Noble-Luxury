@@ -1,15 +1,18 @@
 import { useLoaderData } from "react-router-dom"
 import AllEstates from "../../components/AllEstates/AllEstates";
 import Banner from "../../components/Banner/Banner";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import OurServices from "../../components/OurServices/OurServices";
 import OurAgents from "../../components/OurAgents/OurAgents";
 import { Helmet } from "react-helmet";
+import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 
 
 const Home = () => {
+  const {theme} = useContext(AuthContext)
   const [dataLength, setDataLength] = useState(6)
   const allTheEstates = useLoaderData();
+  
   return (
       <div>
         <Helmet>
@@ -34,7 +37,7 @@ const Home = () => {
           </div>
           {
             dataLength == allTheEstates.length ? "" : <div className="text-center mt-5">
-              <button className="btn transition ease-in-out bg-[#E5C597] hover:bg-blue-600 text-white" onClick={() => setDataLength(allTheEstates.length)}>Show All</button>
+              <button className={`btn transition ease-in-out bg-[#E5C597] hover:bg-blue-600 ${theme == "light" ? "text-white" : "text-black"}`} onClick={() => setDataLength(allTheEstates.length)}>Show All</button>
             </div>
           }
 
