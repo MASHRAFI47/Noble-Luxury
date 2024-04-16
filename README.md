@@ -1,6 +1,8 @@
 # Noble Luxury
 
-##Live Link: [Noble_Luxury](localhost:5173)
+## Live Link:
+
+Here goes the website live link: [Noble_Luxury](localhost:5173)
 
  - Npm Packages Used: AOS Package, React Hook Form, Swiper Slider
  - Displayed Detailed Property Informations 
