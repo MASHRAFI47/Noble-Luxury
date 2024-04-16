@@ -14,7 +14,7 @@ const UserProfile = () => {
             <form className="card-body">
                 <h1 className="text-3xl text-center font-bold" data-aos="fade-down">User Profile</h1>
                 <div>
-                    <img src={user.photoURL} className="rounded-full mx-auto" alt="" />
+                    <img src={user.photoURL} className="rounded-full mx-auto w-32 h-32" alt="" />
                 </div>
                 <div className="form-control" data-aos="fade-right" data-aos-delay="100">
                     <label className="label">
