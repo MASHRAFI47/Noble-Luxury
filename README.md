@@ -1,8 +1,9 @@
-# React + Vite
+# Noble Luxury
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ - Npm Packages Used: AOS Package, React Hook Form, Swiper Slider
+ - Displayed Detailed Property Informations 
+ - Login And Register using form, google, github and facebook
+ - Personalize User Profile and Update Profile
+ - Read blogs and view details for blog page
+ - Responsive real estate luxury for all devices
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
