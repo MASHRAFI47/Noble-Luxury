@@ -14,7 +14,9 @@ const SocialMediaLogin = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user)
-                toast("Login Successful. Redirecting...")
+                toast.success("Login Successful. Redirecting...", {
+                    autoClose: 2000
+                })
                 setTimeout(() => {
                     {
                         location.state ? navigate(location.state) : navigate('/')
@@ -31,7 +33,9 @@ const SocialMediaLogin = () => {
         facebookSignIn()
             .then(result => {
                 console.log(result.user)
-                toast("Login Successful. Redirecting...")
+                toast.success("Login Successful. Redirecting...", {
+                    autoClose: 2000
+                })
                 setTimeout(() => {
                     {
                         location.state ? navigate(location.state) : navigate('/')

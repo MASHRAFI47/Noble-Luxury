@@ -15,6 +15,9 @@ import PrivateRoute from './routes/PrivateRoute/PrivateRoute';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Blogs from './pages/Blogs/Blogs';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
+import BlogDetails from './components/BlogDetails/BlogDetails';
+// import { ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +45,11 @@ const router = createBrowserRouter([
         loader: () => fetch('/blogs.json')
       },
       {
+        path:"/blog/:id",
+        element: <PrivateRoute><BlogDetails /></PrivateRoute>,
+        loader: () => fetch('/blogs.json')
+      },
+      {
         path: "/login",
         element: <Login />,
       },
@@ -56,6 +64,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
+      {/* <ToastContainer autoClose={3000} /> */}
       <RouterProvider router={router} />
     </AuthProvider>
   </React.StrictMode>,

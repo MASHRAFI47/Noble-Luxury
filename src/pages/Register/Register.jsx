@@ -20,22 +20,24 @@ const Register = () => {
     const onSubmit = (data) => {
         const { email, password, fullName, photoURL } = data;
         if (password.length < 6) {
-            toast("Password length must be at least 6 characters")
+            toast.warn("Password length must be at least 6 characters")
             return;
         }
         else if (!/[A-Z]/.test(password)) {
-            toast("Password must contain at least one uppercase")
+            toast.warn("Password must contain at least one uppercase")
             return;
         }
         else if (!/[a-z]/.test(password)) {
-            toast("Password must contain at least one lowercase")
+            toast.warn("Password must contain at least one lowercase")
             return;
         }
         createUser(email, password)
             .then(() => {
                 updateUserProfile(fullName, photoURL)
                     .then(() => {
-                        toast('Register Successful. Redirecting...')
+                        toast.success("Login Successful. Redirecting...", {
+                            autoClose: 2000
+                        })
                         setTimeout(() => {
                             navigate('/')
                         }, 3000);

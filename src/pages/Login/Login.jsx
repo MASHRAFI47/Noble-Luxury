@@ -26,7 +26,9 @@ const Login = () => {
     signInUser(email, password)
       .then(result => {
         console.log(result.user)
-        toast('Login Successful. Redirecting...')
+        toast.success('Login Successful. Redirecting...', {
+          autoClose: 2000
+        })
         setTimeout(() => {
           navigate(location.state ? location.state : '/')
         }, 3000);
@@ -38,8 +40,8 @@ const Login = () => {
   }
   return (
     <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border mt-5">
+      <ToastContainer />
       <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-        <ToastContainer />
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
