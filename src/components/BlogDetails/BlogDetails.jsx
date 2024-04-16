@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom"
 
 const BlogDetails = () => {
@@ -7,9 +8,15 @@ const BlogDetails = () => {
     console.log(singleBlog)
   return (
     <div className="container mx-auto">
-        <div className="mt-10">
-            <h1 className="text-2xl"><span className="font-semibold">Title:</span> {singleBlog.title}</h1>
-            <p className="text-2xl"><span className="font-semibold">Description:</span></p>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Blog Details {singleBlog.title}</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+        <div className="mt-10 space-y-5">
+            <h1 className="text-2xl font-semibold"><span className="font-semibold">Title:</span> {singleBlog.title}</h1>
+            <img src={singleBlog.image_url} className="w-full rounded-xl" alt="" />
+            <p className="text-xl"><span className="font-semibold">Description: </span>{singleBlog.long_description}</p>
         </div>
     </div>
   )

@@ -8,6 +8,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 // toast
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet"
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext)
@@ -40,8 +41,14 @@ const Login = () => {
   }
   return (
     <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border mt-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Login</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <ToastContainer />
       <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
+        <h1 className="text-3xl text-center font-bold">Login</h1>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -65,7 +72,7 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn transition ease-in-out bg-[#E5C597] hover:bg-[#E5C597] border-none text-white">Login</button>
         </div>
 
       </form>

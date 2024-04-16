@@ -9,7 +9,7 @@ const OurServices = () => {
     return (
         <section className="container mx-auto">
             <h1 className="font-bold text-4xl mb-10">Our Services</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:ml-10">
                 <div className="flex gap-2 mb-10">
                     <figure><img src={Group} className='w-30' alt="" /></figure>
                     <div>

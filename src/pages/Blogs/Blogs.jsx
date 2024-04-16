@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom"
 
 const Blogs = () => {
@@ -5,6 +6,11 @@ const Blogs = () => {
   console.log(allBlogs)
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Blogs</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="grid grid-cols-1 md:grid-cols-3 container mx-auto">
         {
           allBlogs.map((blog) => <div key={blog.id}>

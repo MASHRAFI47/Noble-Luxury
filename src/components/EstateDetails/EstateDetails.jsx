@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom"
 
 const EstateDetails = () => {
@@ -7,6 +8,11 @@ const EstateDetails = () => {
   const { estate_title, image, price, long_description, status, location, segment_name, description, facilities, area } = singleEstate
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Estate Details {estate_title}</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="container mx-auto mt-6 px-4 md:px-6 lg:px-0 md:grid md:grid-cols-4">
         <div className="md:flex md:justify-between col-span-4">
           <h1 className="text-2xl font-semibold">{estate_title}</h1>

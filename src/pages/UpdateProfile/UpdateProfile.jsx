@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 // import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
     const { user, updateUserProfile } = useContext(AuthContext)
@@ -14,18 +15,25 @@ const UpdateProfile = () => {
         formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
-        const {fullName, photoURL} = data
+        const { fullName, photoURL } = data
         updateUserProfile(fullName, photoURL)
-        .then(() => {
-            toast("Profile Updated")
-        })
-        .catch(error => {
-            console.log(error.message)
-        })
+            .then(() => {
+                toast.success("Profile Updated")
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
     }
     return (
         <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Update Profile</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
+            <ToastContainer />
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
+                <h1 className="text-3xl text-center font-bold">Update Profile</h1>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
@@ -47,7 +55,7 @@ const UpdateProfile = () => {
                     <label className="label">
                         <span className="label-text">Full Name</span>
                     </label>
-                    <input type="text" placeholder="full name" defaultValue={user ? user.displayName : ""}  className="input input-bordered" {...register("fullName", { required: true })} />
+                    <input type="text" placeholder="full name" defaultValue={user ? user.displayName : ""} className="input input-bordered" {...register("fullName", { required: true })} />
                     {errors.fullName && <span>Update Required</span>}
                 </div>
                 <div className="form-control">
@@ -58,7 +66,7 @@ const UpdateProfile = () => {
                     {errors.photoURL && <span>Update Required</span>}
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn btn-primary">Update Profile</button>
+                    <button className="btn transition ease-in-out bg-[#E5C597] hover:bg-[#E5C597] border-none text-white">Update Profile</button>
                 </div>
             </form>
         </div>

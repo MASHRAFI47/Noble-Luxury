@@ -4,6 +4,7 @@ import Banner from "../../components/Banner/Banner";
 import { useState } from "react";
 import OurServices from "../../components/OurServices/OurServices";
 import OurAgents from "../../components/OurAgents/OurAgents";
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
@@ -11,6 +12,12 @@ const Home = () => {
   const allTheEstates = useLoaderData();
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+      
       <Banner />
 
       <OurServices />

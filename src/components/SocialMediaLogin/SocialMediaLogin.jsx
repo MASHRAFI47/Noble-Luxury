@@ -1,9 +1,13 @@
 import { useContext } from "react";
-import { FaFacebook, FaGoogle } from "react-icons/fa6";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+//images
+import GooglePic from '../../../src/assets/images/google.png'
+import FacebookPic from '../../../src/assets/images/facebook.png'
+import GithubPic from '../../../src/assets/images/github-sign.png'
 
 const SocialMediaLogin = () => {
     const { facebookSignIn, googleSignIn } = useContext(AuthContext)
@@ -50,8 +54,11 @@ const SocialMediaLogin = () => {
     return (
         <div className="px-8">
             <ToastContainer />
-            <button className="btn w-full" onClick={handleGoogleSignIn}><FaGoogle />Login With Google</button>
-            <button className="btn w-full mt-4 mb-8" onClick={handleFacebookSignIn}><FaFacebook />Login With Facebook</button>
+            <div className="grid grid-cols-3 gap-5 mt-4 mb-8">
+                <button className="flex gap-2 items-center btn bg-transparent border border-[#FF3C4E] text-[#FF3C4E] hover:bg-[#FF3C4E] hover:text-white" onClick={handleGoogleSignIn}><img src={GooglePic} className="w-5" alt="" />Google</button>
+                <button className="flex gap-2 items-center btn bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" onClick={handleFacebookSignIn}><img src={FacebookPic} className="w-5" alt="" />Google</button>
+                <button className="flex gap-2 items-center btn border-black hover:border-black" onClick={handleGoogleSignIn}><img src={GithubPic} className="w-5" alt="" />Google</button>
+            </div>
         </div>
     )
 }
