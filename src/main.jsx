@@ -16,6 +16,8 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Blogs from './pages/Blogs/Blogs';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 import BlogDetails from './components/BlogDetails/BlogDetails';
+import { HelmetProvider } from 'react-helmet-async';
+import Contact from './pages/Contact/Contact';
 // import { ToastContainer } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 
@@ -45,7 +47,7 @@ const router = createBrowserRouter([
         loader: () => fetch('/blogs.json')
       },
       {
-        path:"/blog/:id",
+        path: "/blog/:id",
         element: <PrivateRoute><BlogDetails /></PrivateRoute>,
         loader: () => fetch('/blogs.json')
       },
@@ -56,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />
+      },
+      {
+        path: "/contact-us",
+        element: <Contact />
       }
     ]
   },
@@ -63,9 +69,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
-      {/* <ToastContainer autoClose={3000} /> */}
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </HelmetProvider>
   </React.StrictMode>,
 )

@@ -9,7 +9,7 @@ const OurAgents = () => {
             <p className="mb-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, perferendis nemo? Molestiae quisquam saepe, soluta minima voluptatem fuga dolorem neque officia at eum</p>
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
-                <div className="card bg-base-100 shadow-xl p-2">
+                <div className="card bg-base-100 shadow-xl p-2 border">
                     <figure>
                         <img src={Agent1} alt="Shoes" className="rounded-full w-[15rem] h-[15rem] mx-auto" />
                     </figure>
@@ -18,7 +18,7 @@ const OurAgents = () => {
                         <p>Company CEO</p>
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl p-2">
+                <div className="card bg-base-100 shadow-xl p-2 border">
                     <figure>
                         <img src={Agent2} alt="Shoes" className="rounded-full w-[15rem] h-[15rem] mx-auto" />
                     </figure>
@@ -27,7 +27,7 @@ const OurAgents = () => {
                         <p>Company Agent</p>
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl p-2">
+                <div className="card bg-base-100 shadow-xl p-2 border">
                     <figure>
                         <img src={Agent3} alt="Shoes" className="rounded-full w-[15rem] h-[15rem] mx-auto" />
                     </figure>

@@ -9,6 +9,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet"
+import { HelmetProvider } from "react-helmet-async"
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext)
@@ -40,50 +41,52 @@ const Login = () => {
       })
   }
   return (
-    <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border mt-5">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Login</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
-      <ToastContainer />
-      <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="text-3xl text-center font-bold">Login</h1>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input type="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
-          {errors.email && <span>This field is required</span>}
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Password</span>
-          </label>
-          <input type={showPass ? "text" : "password"} placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
-          <span className="mt-0 mr-0 ml-auto mb-0 relative bottom-8 right-4" onClick={() => setShowPass(!showPass)}>
-            {
-              showPass ? <FaEye /> : <FaEyeSlash />
-            }
-          </span>
-          {errors.password && <span>This field is required</span>}
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
-        </div>
-        <div className="form-control mt-6">
-          <button className="btn transition ease-in-out bg-[#E5C597] hover:bg-[#E5C597] border-none text-white">Login</button>
-        </div>
+    <HelmetProvider>
+      <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto border mt-5">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Login</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+        <ToastContainer />
+        <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
+          <h1 className="text-3xl text-center font-bold">Login</h1>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Email</span>
+            </label>
+            <input type="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
+            {errors.email && <span>This field is required</span>}
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Password</span>
+            </label>
+            <input type={showPass ? "text" : "password"} placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
+            <span className="mt-0 mr-0 ml-auto mb-0 relative bottom-8 right-4" onClick={() => setShowPass(!showPass)}>
+              {
+                showPass ? <FaEye /> : <FaEyeSlash />
+              }
+            </span>
+            {errors.password && <span>This field is required</span>}
+            <label className="label">
+              <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+            </label>
+          </div>
+          <div className="form-control mt-6">
+            <button className="btn transition ease-in-out bg-[#E5C597] hover:bg-[#E5C597] border-none text-white">Login</button>
+          </div>
 
-      </form>
-      <div className="form-control">
-        <p className="text-center text-sm mb-2">-Or Sign In Using-</p>
-        <SocialMediaLogin />
+        </form>
+        <div className="form-control">
+          <p className="text-center text-sm mb-2">-Or Sign In Using-</p>
+          <SocialMediaLogin />
+        </div>
+        <div className="form-control">
+          <p className="text-center mb-5">New User? <Link to={'/register'} className="text-blue-600 font-semibold">Register Now</Link></p>
+        </div>
       </div>
-      <div className="form-control">
-        <p className="text-center mb-5">New User? <Link to={'/register'} className="text-blue-600 font-semibold">Register Now</Link></p>
-      </div>
-    </div>
+    </HelmetProvider>
   )
 }
 
